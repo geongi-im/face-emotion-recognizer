@@ -1,0 +1,14 @@
+tensorflow[and-cuda]>=2.16,<3
+numpy<2.0           # TF와의 호환 안전 범위 권장
+pandas>=1.5
+scikit-learn>=1.2
+matplotlib>=3.7
+tqdm>=4.65
+opencv-python>=4.7
+Pillow>=9.5
+mediapipe>=0.10.20
+python-dotenv>=1.0.0
+fastapi>=0.100.0
+uvicorn>=0.23.0
+python-multipart>=0.0.6
+websockets>=11.0

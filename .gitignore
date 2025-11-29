@@ -1,0 +1,29 @@
+# claude code
+.calude/
+.commit_message.txt
+
+# venv
+.venv/
+
+# logs
+logs/
+*.log
+
+# output
+*.csv
+dataset/
+dataset_test/
+dataset_*/
+models/
+
+# python
+*.pyc
+__pycache__/
+
+# etc
+.env
+settings.json
+.vscode/settings.json\
+models/
+.claude/
+info.md

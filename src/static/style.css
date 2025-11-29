@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #007AFF;
+    --bg-color: #FFFFFF;
+    --text-color: #1D1D1F;
+    --secondary-text: #86868B;
+    --card-bg: #F5F5F7;
+    --success-color: #34C759;
+    --error-color: #FF3B30;
+    --border-radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    flex: 1;
+    min-height: 0; /* Prevent overflow */
+}
+
+/* Fix for grid item overflow */
+.content-wrapper > * {
+    min-width: 0;
+}
+
+/* Video Section */
+.video-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%; /* Ensure it takes full width of grid cell */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Prevent overflow */
+    /* aspect-ratio removed to allow video to define height */
+    background-color: #000;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    line-height: 0; /* Prevent extra space below video */
+}
+
+video {
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't exceed container */
+    height: auto; /* Maintain native aspect ratio */
+    display: block;
+    transform: scaleX(-1); /* Mirror effect */
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1); /* Mirror overlay too */
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn-primary {
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.btn-primary.stop {
+    background-color: var(--error-color);
+}
+
+/* Status Indicator */
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--secondary-text);
+}
+
+.status-indicator.connected .status-dot {
+    background-color: var(--success-color);
+    box-shadow: 0 0 8px var(--success-color);
+}
+
+.status-indicator.connected .status-text {
+    color: var(--success-color);
+}
+
+/* Stats Section */
+.stats-section {
+    height: 100%;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    height: 100%;
+    overflow-y: auto;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.placeholder-text {
+    color: var(--secondary-text);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Emotion Bars */
+.emotion-item {
+    margin-bottom: 1rem;
+}
+
+.emotion-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.progress-bg {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+/* Emotion Colors */
+.emotion-happy .progress-fill { background-color: #FFD60A; }
+.emotion-sad .progress-fill { background-color: #5E5CE6; }
+.emotion-angry .progress-fill { background-color: #FF453A; }
+.emotion-surprise .progress-fill { background-color: #FF9F0A; }
+.emotion-neutral .progress-fill { background-color: #8E8E93; }
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

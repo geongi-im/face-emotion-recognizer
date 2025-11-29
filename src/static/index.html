@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Emotion Recognizer</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Face Emotion Recognizer</h1>
+        </header>
+
+        <main>
+            <div class="content-wrapper">
+                <!-- Video Feed Section -->
+                <div class="video-section">
+                    <div class="video-container">
+                        <video id="webcam" autoplay playsinline muted></video>
+                        <canvas id="overlay"></canvas>
+                    </div>
+                    <div class="controls">
+                        <button id="startBtn" class="btn-primary">Start Camera</button>
+                        <div id="status" class="status-indicator">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Disconnected</span>
+                        </div>
+                    </div>
+                    <div id="debug-log" style="margin-top: 10px; font-size: 12px; color: #666; max-height: 100px; overflow-y: auto; border: 1px solid #eee; padding: 5px; display: none;"></div>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="stats-section">
+                    <div class="card">
+                        <h2>Emotion Analysis</h2>
+                        <div id="stats-container">
+                            <div class="placeholder-text">Start camera to see analysis</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
