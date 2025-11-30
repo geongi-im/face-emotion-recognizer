@@ -2,6 +2,14 @@
 
 MobileNetV3Large 기반 딥러닝 모델을 활용한 실시간 얼굴 감정 인식 시스템입니다.
 
+## 온라인 데모
+
+**웹에서 바로 테스트**: [https://emotion.mqway.com](https://emotion.mqway.com)
+
+웹캠을 통해 실시간으로 얼굴 감정 인식을 체험할 수 있습니다. 별도의 설치 없이 브라우저에서 바로 사용 가능합니다.
+
+![데모 화면](demo.gif)
+
 ## 데이터셋
 
 **출처**: [AIHub - 한국인 감정인식을 위한 복합 영상](https://www.aihub.or.kr/aihubdata/data/view.do?pageIndex=1&currMenu=115&topMenu=100&srchOptnCnd=OPTNCND001&searchKeyword=%EA%B0%90%EC%A0%95&srchDetailCnd=DETAILCND001&srchOrder=ORDER001&srchPagePer=20&srchDataRealmCode=REALM001&aihubDataSe=data&dataSetSn=82)
@@ -43,7 +51,7 @@ MobileNetV3Large 기반 딥러닝 모델을 활용한 실시간 얼굴 감정 �
 - MediaPipe 기반 얼굴 검출
 - 실시간 감정 분석 결과 표시
 
-## 📁 프로젝트 구조
+## 프로젝트 구조
 
 ```
 face-emotion-recognizer/

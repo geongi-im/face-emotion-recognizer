@@ -1,6 +1,5 @@
 import os
 import sys
-# Add project root to sys.path to allow running as script
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import cv2
@@ -25,7 +24,6 @@ ENV_IMG_SIZE = int(os.getenv('IMG_SIZE', '224'))
 SERVER_PORT = int(os.getenv('SERVER_PORT', '8001'))
 SERVER_HOST = os.getenv('SERVER_HOST', '0.0.0.0')
 MODEL_PATH = "models/emotion_classifier_5_classes_savedmodel"
-
 
 # ============ EmotionTester 클래스 (웹 서버용) ============
 class EmotionTester:
