@@ -14,7 +14,6 @@ logs/
 dataset/
 dataset_test/
 dataset_*/
-models/
 
 # python
 *.pyc
@@ -23,7 +22,6 @@ __pycache__/
 # etc
 .env
 settings.json
-.vscode/settings.json\
-models/
+.vscode/settings.json\ 
 .claude/
 info.md
