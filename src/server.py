@@ -22,6 +22,8 @@ load_dotenv()
 
 # 환경변수에서 설정 로드
 ENV_IMG_SIZE = int(os.getenv('IMG_SIZE', '224'))
+SERVER_PORT = int(os.getenv('SERVER_PORT', '8001'))
+SERVER_HOST = os.getenv('SERVER_HOST', '0.0.0.0')
 MODEL_PATH = "models/emotion_classifier_5_classes_savedmodel"
 
 
@@ -383,4 +385,4 @@ async def websocket_endpoint(websocket: WebSocket):
             pass
 
 if __name__ == "__main__":
-    uvicorn.run("src.server:app", host="0.0.0.0", port=8001, reload=False)
+    uvicorn.run("src.server:app", host=SERVER_HOST, port=SERVER_PORT, reload=False)
