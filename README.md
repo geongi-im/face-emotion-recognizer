@@ -2,12 +2,6 @@
 
 MobileNetV3Large 기반 딥러닝 모델을 활용한 실시간 얼굴 감정 인식 시스템입니다.
 
-## 온라인 데모
-
-**웹에서 바로 테스트**: [https://emotion.mqway.com](https://emotion.mqway.com)
-
-웹캠을 통해 실시간으로 얼굴 감정 인식을 체험할 수 있습니다. 별도의 설치 없이 브라우저에서 바로 사용 가능합니다.
-
 ![데모 화면](demo.gif)
 
 ## 데이터셋
@@ -16,8 +10,8 @@ MobileNetV3Large 기반 딥러닝 모델을 활용한 실시간 얼굴 감정 �
 
 **규모**:
 - 5개 감정 클래스: `happy`, `sad`, `neutral`, `embarrassed`, `anxiety`
-- 클래스당 약 70,000개 이미지
-- **총 350,000개 이미지** 사용
+- 클래스당 약 30,000개 이미지
+- **총 150,000개 이미지** 사용
 
 **학습 환경**:
 - **OS**: Ubuntu
@@ -346,4 +340,4 @@ Get-Content logs\app_2025_11_30.log -Wait  # Windows PowerShell
 ---
 
 **개발 환경**: Python 3.10, TensorFlow 2.13, Ubuntu + RTX 3060 12GB
-**데이터셋**: AIHub "한국인 감정인식을 위한 복합 영상" (350,000개 이미지)
+**데이터셋**: AIHub "한국인 감정인식을 위한 복합 영상"
